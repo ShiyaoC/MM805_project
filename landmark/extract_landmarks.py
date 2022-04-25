@@ -21,7 +21,7 @@ plt.close('all')
 
 detector = dlib.get_frontal_face_detector() 
 predictor = dlib.shape_predictor("./shape_predictor_68_face_landmarks.dat") 
-image = imageio.imread('./Sheila.jpg')  # load image
+image = imageio.imread('../images/test16.jpg')  # load image
 
 faces = detector(image)  # detect faces
 

@@ -1,7 +1,8 @@
 % i = 4;
 % in_fn_test = fullfile(image_root_dir, strcat(dblm.rel_filenames{i}, '.jpg'));
 % in_img = imread(in_fn_test);
-in_img = imread("../images/Sheila.jpg");
+img = "../images/test16.jpg"
+in_img = imread(img);
 load(['models/m170306_dlib2_xm2.mat']);
 load(['../test.mat']);
 addpath(genpath('code'));
@@ -14,10 +15,15 @@ lm = B;
 
 figure(1);
 
-subplot(121);
-imshow(in_img); hold on; plot(lm(1:2:end), lm(2:2:end), 'g.'); hold off;
-title('Input image with landmarks');
+subplot(131);
+% imshow(in_img); hold on; plot(lm(1:2:end), lm(2:2:end), 'g.'); hold off;
+imshow(in_img);
+title(img);
 
-subplot(122); 
+subplot(132);
+imshow(in_img); hold on; plot(lm(1:2:end), lm(2:2:end), 'g.'); hold off;
+title('image with landmarks');
+
+subplot(133); 
 imshow(out_img);
 title('Result of frontalization');
