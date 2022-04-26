@@ -1,4 +1,4 @@
-% i = 4;
+
 % in_fn_test = fullfile(image_root_dir, strcat(dblm.rel_filenames{i}, '.jpg'));
 % in_img = imread(in_fn_test);
 img = "../images/test16.jpg"
